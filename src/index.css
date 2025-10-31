@@ -103,8 +103,8 @@ body{
 }
 
 .contact-us-text2 {
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 600px;
   margin-left: 350px;
 }
 
@@ -133,7 +133,7 @@ body{
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 15%;
-  margin-top: -400px;
+  margin-top: -170px;
   margin-left: 500px;
 }
 
@@ -215,4 +215,25 @@ header a.active {
 .logo{
   height: 40px;
   width: 40px;
+}
+
+/* Общий стиль подвала */
+footer {
+  background-color: transparent; 
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Ссылки внутри подвала */
+footer a {
+  margin: 0 15px;            
+  text-decoration: none;     
+  color: white;                
+  font-weight: 500;            
+  transition: color 0.3s;      
+}
+
+footer a:hover {
+  color: #007BFF;              
 }
