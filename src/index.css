@@ -1,4 +1,4 @@
- @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body{
     font-family: "Inter", sans-serif;
@@ -10,7 +10,7 @@ body{
 
 .Browse-everything {
   font-size: 70px;
-  margin-left: 350px;
+  margin-left: 300px;
 }
 
 .Advantage-1 {
@@ -219,21 +219,39 @@ header a.active {
 
 /* Общий стиль подвала */
 footer {
-  background-color: transparent; 
+  background-color: transparent; /* Цвет фона, по вашему запросу */
   padding: 20px 0;
   text-align: center;
   margin-top: 40px;
 }
 
-/* Ссылки внутри подвала */
 footer a {
-  margin: 0 15px;            
-  text-decoration: none;     
-  color: white;                
+  margin: 0 15px;           
+  text-decoration: none;       
+  color: white;                 
   font-weight: 500;            
   transition: color 0.3s;      
 }
 
 footer a:hover {
-  color: #007BFF;              
+  color: #007BFF;            
+}
+
+.Products{
+  margin-top: 200px;
+}
+.product1 {
+  height: 300px;
+  width: 200px;
+  margin-top: -360px;
+  margin-left: 100px;
+  font-size: 20px;
+  background: linear-gradient(145deg, #2d1b69, #3d2a7a); 
+  border: 1px solid #4a3a8c; 
+  border-radius: 16px; 
+  padding: 30px 25px;
+  text-align: center;
+  color: #f0e6ff; 
+  box-shadow: 0 10px 25px rgba(45, 27, 105, 0.5); 
+  transition: all 0.3s ease; 
 }

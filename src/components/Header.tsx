@@ -6,7 +6,7 @@ function Header() {
             <img src="/favicon.ico" alt="Icon" className="logo"></img>
             <a href="/benefits">Benefits</a>
             <a href="/about">About as</a>
-            <a href="/vacansy">Vacansy</a>
+            <a href="/vacansy">Vacansies</a>
         </header>
     );
 }
