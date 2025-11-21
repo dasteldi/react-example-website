@@ -2,8 +2,7 @@ import React from 'react';
 
 function Advantages() {
     return (
-        <div className='Advantage-s'>
-            <h1 className='Advantage-text'>Our Advantages</h1>
+        <div className='advantages-wrapper'>
             <div className='Advantage-1'>
                 <p>Control Your Global Presence</p>
                 <p>Manage and track satellite offices, ensuring consistent performance and streamlined operations everywhere.</p>

@@ -1,15 +1,27 @@
-import React from "react";
+import { useState, useEffect } from 'react';
 
-function Header() {
+const Header: React.FC = () => {
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+    useEffect(() => {
+        const handleScroll = (): void => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <header>
-            <img src="/favicon.ico" alt="Icon" className="logo"></img>
-            <a href="/benefits">Benefits</a>
-            <a href="/about">About as</a>
-            <a href="/vacansy">Vacansies</a>
+        <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+            <nav className="nav">
+                <ul className="nav-links">
+                    <li><a href="/about-as">🛠️About as</a></li>
+                    <li><a href="/vacansies">⭐Vacansies</a></li>
+                </ul>
+            </nav>
         </header>
     );
-}
-
+};
 
 export default Header;

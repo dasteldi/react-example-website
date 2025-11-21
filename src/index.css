@@ -6,61 +6,104 @@ body{
     background-size: 2000px 2000px;
     background-image: url('background.jpg');
     color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: transparent;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.header.scrolled {
+    background: #2b2b2b;
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    margin-right: 200px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ccc;
 }
 
 .Browse-everything {
-  font-size: 70px;
-  margin-left: 300px;
-}
-
-.Advantage-1 {
-  font-size: 20px;
-  margin-left: 600px;
-  height: 300px;
-  width: 200px;
-  background: linear-gradient(145deg, #2d1b69, #3d2a7a); 
-  border: 1px solid #4a3a8c; 
-  border-radius: 16px; 
-  padding: 30px 25px;
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ffffff, rgb(138, 137, 196), #9d9fbf, #f2f6ff, #f0edff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s ease infinite;
   text-align: center;
-  color: #f0e6ff; 
-  box-shadow: 0 10px 25px rgba(45, 27, 105, 0.5); 
-  transition: all 0.3s ease; 
+  margin-bottom: 20px;
+  font-size: 50px;
 }
 
-.Advantage-1:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 35px rgba(45, 27, 105, 0.7);
-    border-color: #7b5dd6; 
+@keyframes Browse-everything {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.Advantage-2{
-  height: 300px;
-  width: 200px;
-  margin-left: 1100px;
-  margin-top: -360px;
-  font-size: 20px;
-  background: linear-gradient(145deg, #2d1b69, #3d2a7a); 
-  border: 1px solid #4a3a8c; 
-  border-radius: 16px; 
-  padding: 30px 25px;
+/* Advantages Section - ГОРИЗОНТАЛЬНОЕ РАСПОЛОЖЕНИЕ */
+.Advantage-text {
+  font-size: 50px;
   text-align: center;
-  color: #f0e6ff; 
-  box-shadow: 0 10px 25px rgba(45, 27, 105, 0.5); 
-  transition: all 0.3s ease; 
+  margin-top: 100px;
+  margin-bottom: 80px;
 }
 
-.Advantage-2:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 35px rgba(45, 27, 105, 0.7);
-    border-color: #7b5dd6; 
+/* Контейнер для горизонтального расположения карточек */
+.advantages-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: nowrap;
 }
 
+.Advantage-1,
+.Advantage-2,
 .Advantage-3 {
-  height: 300px;
-  width: 200px;
-  margin-top: -360px;
-  margin-left: 100px;
   font-size: 20px;
   background: linear-gradient(145deg, #2d1b69, #3d2a7a); 
   border: 1px solid #4a3a8c; 
@@ -70,45 +113,94 @@ body{
   color: #f0e6ff; 
   box-shadow: 0 10px 25px rgba(45, 27, 105, 0.5); 
   transition: all 0.3s ease; 
+  height: 300px;
+  width: 280px;
+  margin: 0;
+  flex-shrink: 0;
 }
 
+.Advantage-1:hover,
+.Advantage-2:hover,
 .Advantage-3:hover {
     transform: translateY(-5px); 
     box-shadow: 0 15px 35px rgba(45, 27, 105, 0.7);
     border-color: #7b5dd6; 
 }
 
-.Advantage-text {
-  margin-left: 550px;
-  font-size: 50px;
-}
-
-.Advantage-s {
-  margin-top: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
+/* Contact Section */
 .contact-us{
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
-  margin-left: 150px;
-  font-size: 20px;
+  margin-top: 150px;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .contact-us-text{
-  margin-left: 430px;
   font-size: 50px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
 }
 
 .contact-us-text2 {
-  height: 300px;
-  width: 600px;
-  margin-left: 350px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.learn-more-btn {
+/* Main App Section */
+.main-app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  padding: 0 20px;
+}
+
+.about_text{
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.product1 {
+  font-size: 20px;
+  background: linear-gradient(145deg, #2d1b69, #3d2a7a); 
+  border: 1px solid #4a3a8c; 
+  border-radius: 16px; 
+  padding: 40px 30px;
+  text-align: center;
+  color: #f0e6ff; 
+  box-shadow: 0 10px 25px rgba(45, 27, 105, 0.5); 
+  transition: all 0.3s ease; 
+  height: 350px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.product1:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 20px 40px rgba(45, 27, 105, 0.7);
+    border-color: #7b5dd6; 
+}
+
+/* Buttons */
+.learn-more-btn,
+.learn-more-btn2 {
   appearance: none;
   background-color: #7721a9;
   border: 5px solid #7721a9;
@@ -116,142 +208,263 @@ body{
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  display: inline-block;
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 20px;
   font-weight: 600;
   line-height: normal;
-  margin: 100;
-  min-height: 1px;
-  min-width: 0;
   outline: none;
-  padding: 10px 30px;
+  padding: 15px 40px;
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 15%;
-  margin-top: -170px;
-  margin-left: 500px;
+  display: block;
+  width: auto;
+  min-width: 220px;
+  max-width: 300px;
+  margin: 30px auto;
 }
 
-header {
-  position: relative;
-  right: 550px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: unset;
-  background-color: transparent;
-  padding: 20px 10px;
+.learn-more-btn:hover,
+.learn-more-btn2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(119, 33, 169, 0.5);
+  background-color: #8a2bbe;
+  border-color: #8a2bbe;
 }
 
-.wrap-logo {
-  display: flex;
-  align-items: center;
- 
-}
-
-header a {
-  justify-content: space-around;
-  color: #ffffff;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  border-radius: 4px;
-  margin-left: -1100px;
-}
-
-header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-header a:hover {
-  background-color: #30144e;
-  color: #ffffff;
-}
-
-header a.active {
-  background-color: #30144e;
-}
-
-.learn-more-btn2 {
-  appearance: none;
-  background-color: #7721a9;
-  border: 5px solid #7721a9;
-  border-radius: 5px; 
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 20px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 100;
-  min-height: 1px;
-  min-width: 0;
-  outline: none;
-  padding: 10px 30px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 15%; 
-  margin-left: 500px;
-}
-
-.main-app{
-  display: flex;
-  flex-direction: column;
-  margin-left: 80px;
-}
-
-.logo{
-  height: 40px;
-  width: 40px;
-}
-
-/* Общий стиль подвала */
+/* Footer */
 footer {
-  background-color: transparent; /* Цвет фона, по вашему запросу */
-  padding: 20px 0;
+  background-color: transparent; 
+  padding: 60px 20px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 120px;
 }
 
 footer a {
-  margin: 0 15px;           
+  margin: 0 20px;           
   text-decoration: none;       
   color: white;                 
   font-weight: 500;            
   transition: color 0.3s;      
+  font-size: 16px;
 }
 
 footer a:hover {
   color: #007BFF;            
 }
 
-.Products{
-  margin-top: 200px;
+/* АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ */
+@media (max-width: 1024px) {
+  .nav-links {
+    margin-right: 50px;
+    gap: 20px;
+  }
+  
+  .advantages-container {
+    gap: 40px;
+    padding: 0 30px;
+  }
+  
+  .Advantage-1,
+  .Advantage-2,
+  .Advantage-3 {
+    width: 280px;
+    height: 320px;
+    padding: 35px 25px;
+  }
+  
+  .Advantage-text {
+    font-size: 42px;
+    margin-bottom: 60px;
+  }
 }
-.product1 {
-  height: 300px;
-  width: 200px;
-  margin-top: -360px;
-  margin-left: 100px;
-  font-size: 20px;
-  background: linear-gradient(145deg, #2d1b69, #3d2a7a); 
-  border: 1px solid #4a3a8c; 
-  border-radius: 16px; 
-  padding: 30px 25px;
-  text-align: center;
-  color: #f0e6ff; 
-  box-shadow: 0 10px 25px rgba(45, 27, 105, 0.5); 
-  transition: all 0.3s ease; 
+
+/* АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ */
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* ШАПКА ДЛЯ МОБИЛЬНЫХ */
+  .header {
+    padding: 15px 20px;
+    background: #2b2b2b; /* Всегда видимый фон на мобильных */
+  }
+  
+  .header.scrolled {
+    padding: 12px 20px;
+  }
+  
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .nav-links {
+    display: flex !important;
+    justify-content: center;
+    gap: 15px;
+    margin-right: 0 !important;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    font-size: 14px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+  }
+  
+  .logo {
+    font-size: 22px;
+  }
+  
+  .Browse-everything {
+    font-size: 28px;
+    margin-top: 100px;
+    padding: 0 20px;
+  }
+  
+  .Advantage-text,
+  .contact-us-text {
+    font-size: 32px;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    padding: 0 20px;
+  }
+  
+  /* НА МОБИЛЬНЫХ - ВЕРТИКАЛЬНОЕ РАСПОЛОЖЕНИЕ */
+  .advantages-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    align-items: center;
+  }
+  
+  .Advantage-1,
+  .Advantage-2,
+  .Advantage-3,
+  .product1 {
+    height: auto;
+    min-height: 250px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px 20px;
+  }
+  
+  .contact-us {
+    margin-top: 100px;
+    padding: 0 20px;
+  }
+  
+  .contact-us-text2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .main-app {
+    margin-top: 100px;
+    padding: 0 20px;
+  }
+  
+  .about_text {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .learn-more-btn,
+  .learn-more-btn2 {
+    width: 100%;
+    max-width: 280px;
+    font-size: 18px;
+    padding: 12px 25px;
+    margin: 25px auto;
+  }
+  
+  footer {
+    padding: 40px 20px;
+    margin-top: 80px;
+  }
+  
+  footer a {
+    display: block;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+}
+
+/* ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
+@media (max-width: 380px) {
+  .Browse-everything {
+    font-size: 24px;
+  }
+  
+  .Advantage-text,
+  .contact-us-text {
+    font-size: 28px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  
+  .Advantage-1,
+  .Advantage-2,
+  .Advantage-3,
+  .product1 {
+    padding: 25px 15px;
+    font-size: 18px;
+    min-height: 220px;
+  }
+  
+  .nav-links {
+    gap: 10px;
+  }
+  
+  .nav-links a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .learn-more-btn,
+  .learn-more-btn2 {
+    font-size: 16px;
+    padding: 12px 20px;
+    max-width: 250px;
+    min-width: 200px;
+  }
+  
+  .about_text,
+  .contact-us-text2 {
+    font-size: 15px;
+  }
+}
+
+/* ФОРСИРОВАННЫЕ СТИЛИ ДЛЯ ГОРИЗОНТАЛЬНОГО РАСПОЛОЖЕНИЯ */
+body .advantages-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 50px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+}
+
+body .Advantage-1,
+body .Advantage-2, 
+body .Advantage-3 {
+    position: static !important;
+    float: none !important;
+    margin: 0 !important;
+    width: 300px !important;
+    height: 350px !important;
+    flex-shrink: 0 !important;
 }
